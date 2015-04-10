@@ -1,0 +1,25 @@
+{
+  "name": "Linkly",
+  "version": "1.0.0",
+  "description": "What do I do as an extension",
+  "manifest_version": 2,
+  
+  "browser_action": {
+    "name": "Linkly",
+	  "default_popup": "html/popup.html"
+  },
+  
+  "content_scripts": [ {
+	  "all_frames": true,
+    "js": [ "js/jquery-2.0.2.min.js", "js/content.js" ],
+	  "css": ["css/content.css"],
+    "matches": [ "\u003Call_urls>", "http://*/*", "https://*/*"],
+	  "run_at": "document_end"
+  }],
+  
+  "permissions": [
+    "activeTab",
+	  "tabs",
+    "https://ajax.googleapis.com/"
+  ]
+}
