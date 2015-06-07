@@ -1,6 +1,6 @@
 body {
     width: 200px;
-    height: 200px;
+    height: auto;
     font-family: 
         Cambria,
         Georgia,
@@ -9,29 +9,75 @@ body {
     background: #4be4c2;
     color: white;
     padding: 0px;
+    margin: 0px;
 }
 #container {
-    width: 95%;
-    height: 95%;
-    
-    margin: 0 auto
+    width: 200px;
+    /*color: #e6f1f2;*/
+    position: absolute;
+}
+#header-container {
+    height: auto;
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+h1 {
+    font-family: Flama;
+    color: #ffffff;
+    font-size: 30.911px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: center;
+    transform: scaleX(1.0002);
+    text-shadow: 2px 3px 0px rgba(8, 44, 36, 0.16);
+    margin-bottom: 0px;
 }
 #menu-container {
-    font-family:  "trebuchet ms", Trebuchet, sans-serif;
+    height: 134px;
+    background-image:url(Dreamcatcher134.png)
+    /*background: #e6f1f2;*/
 }
-#menu-container ul{
-    list-style: none;
+
+
+ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    height: 50px;
 }
-#menu-container ul a{
+li {
     padding: 10px;
     font-weight: 100;
     font-size: 12px;
     color: white;
     display: block;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
+    background-color: #e0e0e0;
+    
 }
 
+li:hover{background-color: #5C737E}
+/*li:hover{background-color: #bababa;}*/
 
+
+li a {
+    text-decoration: none;
+    color: #5C737E;
+    font-weight:800;}
+    
+li a:hover {
+    text-decoration: none;
+    color: #fff;
+    font-weight:800;}
+
+#footer-container {
+    height: auto;
+    /*background-color: #e6f1f2;*/
+    text-align: center;
+    padding: 10px;    
+}
+
+#link-options li {
+	list-style: none;
+}

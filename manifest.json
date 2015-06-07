@@ -1,25 +1,34 @@
 {
-  "name": "Linkly",
+  "name": "Link Catcher",
   "version": "1.0.0",
-  "description": "What do I do as an extension",
+  "description": "Captures links that can be found on a page. Works best with articles!",
   "manifest_version": 2,
   
   "browser_action": {
-    "name": "Linkly",
-	  "default_popup": "html/popup.html"
+    "name": "Link Catcher"
   },
   
+  "background": {
+	"scripts": ["js/background.js"]
+   },
+  
   "content_scripts": [ {
-	  "all_frames": true,
     "js": [ "js/jquery-2.0.2.min.js", "js/content.js" ],
-	  "css": ["css/content.css"],
-    "matches": [ "\u003Call_urls>", "http://*/*", "https://*/*"],
-	  "run_at": "document_end"
+	"css": ["css/content.css"],
+    "matches": ["http://*/*", "https://*/*"],
+	"run_at": "document_end"
   }],
   
   "permissions": [
     "activeTab",
-	  "tabs",
-    "https://ajax.googleapis.com/"
-  ]
+	"http://*/*",
+	"https://*/*",
+	"tabs",
+    "https://ajax.googleapis.com/",
+	"storage"
+  ],
+  
+  "web_accessible_resources": [
+	"html/popup.html"
+   ]
 }
